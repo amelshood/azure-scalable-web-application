@@ -3,42 +3,8 @@
 This project deploys a scalable, secure, and highly available web application on Azure using Infrastructure as Code (Terraform). The architecture follows Azure best practices and includes all components required for a production-ready environment.
 
 ## Architecture
-```mermaid
-flowchart TD
-    subgraph Azure["Azure Cloud (webapp-rg)"]
-        subgraph VirtualNetwork["Virtual Network (webapp-vnet)"]
-            subgraph WebSubnet["Web Subnet (webapp-web-subnet)"]
-                VMSS["VM Scale Set (webapp-web-vmss)\nNginx Web Servers\nAutomatic OS Updates\nAutoscaling (2-10 instances)"]
-            end
-            
-            subgraph DBSubnet["Database Subnet (webapp-db-subnet)"]
-                SQL["Azure SQL Database\n(webapp-webappdb)"]
-            end
-            
-            subgraph BastionSubnet["AzureBastionSubnet"]
-                Bastion["Azure Bastion Host\n(webapp-bastion-host)"]
-            end
-        end
-        
-        LB["Load Balancer\n(webapp-web-lb)"]
-        PIPLN["Public IP\n(webapp-load-balancer-ip)"]
-        Storage["Storage Account\n(webappstorage)\nStatic Website Hosting"]
-        LAW["Log Analytics Workspace\n(webapp-web-app-law)"]
-        Automation["Automation Account\n(webapp-webapp-automation)\nVM Updates"]
-        
-        Alerts["Alerts\n- High CPU\n- Low Memory"]
-        Monitoring["Azure Monitor\nDiagnostics"]
-    end
-    
-    User["Internet User"] --> PIPLN
-    PIPLN --> LB
-    LB --> VMSS
-    VMSS --> SQL
-    VMSS --> Storage
-    
-    Admin["Administrator"] --> Bastion
-    Bastion --> VMSS
-```
+
+![Architecture Diagram](./docs/architecture-diagram.png)
 
 The solution consists of the following components:
 
