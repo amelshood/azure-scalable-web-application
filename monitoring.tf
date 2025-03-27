@@ -190,7 +190,7 @@ resource "azurerm_portal_dashboard" "web_dashboard" {
           "position": {
             "x": 0,
             "y": 0,
-            "colSpan": 6,
+            "colSpan": 5,
             "rowSpan": 4
           },
           "metadata": {
@@ -252,9 +252,9 @@ resource "azurerm_portal_dashboard" "web_dashboard" {
         },
         "1": {
           "position": {
-            "x": 6,
+            "x": 5,
             "y": 0,
-            "colSpan": 6,
+            "colSpan": 5,
             "rowSpan": 4
           },
           "metadata": {
@@ -316,9 +316,9 @@ resource "azurerm_portal_dashboard" "web_dashboard" {
         },
         "2": {
           "position": {
-            "x": 0,
-            "y": 4,
-            "colSpan": 6,
+            "x": 10,
+            "y": 0,
+            "colSpan": 5,
             "rowSpan": 4
           },
           "metadata": {
@@ -380,9 +380,9 @@ resource "azurerm_portal_dashboard" "web_dashboard" {
         },
         "3": {
           "position": {
-            "x": 6,
+            "x": 0,
             "y": 4,
-            "colSpan": 6,
+            "colSpan": 5,
             "rowSpan": 4
           },
           "metadata": {
@@ -444,9 +444,9 @@ resource "azurerm_portal_dashboard" "web_dashboard" {
         },
         "4": {
           "position": {
-            "x": 0,
-            "y": 8,
-            "colSpan": 6,
+            "x": 5,
+            "y": 4,
+            "colSpan": 5,
             "rowSpan": 4
           },
           "metadata": {
@@ -519,9 +519,9 @@ resource "azurerm_portal_dashboard" "web_dashboard" {
         },
         "5": {
           "position": {
-            "x": 6,
-            "y": 8,
-            "colSpan": 6,
+            "x": 10,
+            "y": 4,
+            "colSpan": 5,
             "rowSpan": 4
           },
           "metadata": {
